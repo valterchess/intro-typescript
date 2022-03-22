@@ -1,14 +1,14 @@
-interface Estudante {
+interface Pessoa {
     nome: string;
     idade: number;
+    nacionalidade: string;
 }
 
-interface Estudante {
-    serie: string;
+interface Brasileiro extends Omit<Pessoa , 'nacionalidade'>{
+
 }
 
-const estudante: Estudante = {
-    nome: 'a',
-    serie: 'b',
-    idade: 3,
+const brasileiro: Brasileiro = {
+    idade: 25,
+    nome: 'Outrs',
 }
